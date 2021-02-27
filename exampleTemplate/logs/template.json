@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "dateOfActivity": "2006-05-18",
+      "dateOfStamp": "2006-05-18",
+      "wbmURL": "https://web.archive.org/web/20060518091950/http://www.undeadlords.net:80/forums/",
+      "imageStampURL": "../archive/timestamps/2006/2006-05/20060518.png",
+      "description": "example description for example activity record object",
+      "backupURL": "../archive/backups/2006/2006-05/20060518.zip"
+    },
+    {
+      "dateOfActivity": "YYYY-MM-DD",
+      "dateOfStamp": "YYYY-MM-DD",
+      "wbmURL": "https://web.archive.org/web/YYYYMMDD091950/http://www.undeadlords.net:80/forums/",
+      "imageStampURL": "../archve/timestamps/YYYYMMDD.png",
+      "description": "example description for example activity record object",
+      "backupURL": "../archive/backups/YYYY/YYYY-MM/YYYYMMDD.zip"
+    }
+  ]
+}
