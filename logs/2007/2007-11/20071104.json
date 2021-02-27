@@ -8,7 +8,7 @@
       "dateOfActivity": "2007-11-04",
       "description": "squire pubzilla posts in general chat board"
     },
-    ,{
+    {
       "dateOfStamp": "2007-11-04",
       "wbmURL": "https://web.archive.org/web/20071105031721/http://forums.undeadlords.net:80/index.php?act=idx",
       "imageStampURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071104.PNG",
@@ -56,5 +56,5 @@
       "dateOfActivity": "2006-07-14",
       "description": "current most active day on udl forums"
     }
-  ]
+   ]
 }
