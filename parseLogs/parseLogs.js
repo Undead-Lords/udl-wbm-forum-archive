@@ -33,15 +33,19 @@ require("fs").writeFileSync('../logs/2007/2007records.md', md);
 
 
 //records.CSV of all data
+const { Parser } = require('json2csv');
 
+const fields = ['dateOfActivity',  'description', 'imageStampURL', 'wbmURL', 'backupURL'];
+const opts = { fields };
 
-//loop through array of record objects
+try {
+	const parser = new Parser(opts);
+	const csv = parser.parse(arr);
+	//console.log(csv);
+	require("fs").writeFileSync('../logs/2007/2007records.csv', csv);
+} catch (err) {
+	console.error(err);
+}
 
 //SET of unique active dates
-//let listUniqueDates = new Set();
-//records.CSV of all data
-//records.JSON of all data
-//records.md of all data
-console.log(listUniqueDates);
-
-
+//console.log(listUniqueDates);
