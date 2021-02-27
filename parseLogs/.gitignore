@@ -1,0 +1,10 @@
+./node_modules
+./node_modules/
+./node_modules/*
+/node_modules
+/node_modules/
+/node_modules/*
+node_modules
+node_modules/
+node_modules/*
+#WHY WONT NODE MODULES STOP TRYING TO ADD/COMMIT ITSELF REEEEEE
