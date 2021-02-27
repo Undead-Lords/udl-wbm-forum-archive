@@ -14,6 +14,7 @@ Contribution guidelines:
 - timestamps should be named YYYYMMDD.png, if that day is already logged and there's a new log of another part of the forum, use YYYYMMDDboardname.png
 - We don't only archive images and html backups, our primary goal is to log evidence of EVERY instance of forum activity.
 - That being said, each snapshot usually has 4 to 8 records of activity. I want each logged. 
+- No need to add them to the json or csv, I'll do that, just include a file that labels every single date with a url to the timestamp uploaded.  
 - Please let us know you are working on a particular year in the discussions-board on the github repo for this project
 - If there are multiple people working on the same year, specify the month.  
 - Label each Year/Month completed on the calendar.md
