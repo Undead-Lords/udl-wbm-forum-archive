@@ -26,3 +26,39 @@ Contribution guidelines:
 - Any questions at all, ask Barri
 
 ---
+
+TODO:
+
+web.archive.org for "http://www.undeadlords.net:80/forums/"
+
+- 2003
+- 2004
+- 2005
+- 2006
+- ~~2007~~
+- 2008
+- 2009
+
+https://web.archive.org/web/19991008085652/http://www.groonesworld.com/UDL/main.html
+web.archive.org for "http://www.groonesworld.com/UDL/main.html"
+
+- 1999
+
+web.archive.org for "http://forums.undeadlords.net/"
+
+- 2007
+- 2008
+- 2009
+- 2010
+- 2013
+- 2015
+- 2016
+- 2017
+- 2018
+- 2019
+- 2020
+- 2021
+
+---
+
+
