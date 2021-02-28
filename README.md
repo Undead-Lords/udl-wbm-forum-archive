@@ -8,7 +8,8 @@ This repo is to duplicate the way back machine archive of our forum history at `
 
 Contribution guidelines:
 
-- YYYYMMDD is the date format we use here.
+- YYYYMMDD is the date format we use for file names.
+- YYYY-MM-DD is the date format we use for json/csv data.  
 - log backups are saved html documents of those wbm snapshots, they need to be compressed.
 - timestamps are screenshots of those snapshots
 - timestamps should be named YYYYMMDD.png, if that day is already logged and there's a new log of another part of the forum, use YYYYMMDDboardname.png

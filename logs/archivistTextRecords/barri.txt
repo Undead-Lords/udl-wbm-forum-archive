@@ -1,53 +1,191 @@
 
----
-2007-11-02
-https://web.archive.org/web/20071102171327/http://www.undeadlords.net:80/forums/
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071102.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
 
 
 ---
-2007-11-04
-https://web.archive.org/web/20071105031721/http://forums.undeadlords.net:80/index.php?act=idx
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071104.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
+
+"dateOfActivity": "2003-12-03"
+"backupURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2003/2003.zip"
+"wbmURL": "https://web.archive.org/web/20031207024221/http://www.undeadlords.net/forums/"
+"imageStampURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2003/2003-12/20031203.png"
+"description": ""
+"dateOfStamp": ""
 
 
 ---
-2007-11-05
-https://web.archive.org/web/20071106033325/http://forums.undeadlords.net:80/index.php?act=idx
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071105.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
+
+"dateOfActivity": "2003-11-04",
+"backupURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2003/2003.zip",
+"wbmURL": "https://web.archive.org/web/20031104084613/http://www.undeadlords.net/forums/",
+"imageStampURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2003/2003-11/20041104.png",
+"description": "",
+"dateOfStamp": ""
+
+---
+
+"dateOfActivity": "2003-06-08",
+"backupURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2003/2003.zip",
+"wbmURL": "https://web.archive.org/web/20030608145115/http://www.undeadlords.net/forums/",
+"imageStampURL": "https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2003/2003-06/20030608.png",
+"description": "",
+"dateOfStamp": ""
+
+---
+
+
+
 
 
 ---
-2007-11-05generalchat
-https://web.archive.org/web/20071106033909/http://forums.undeadlords.net:80/index.php?showforum=2
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071105generalchat.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
+2004-03-01
+https://web.archive.org/web/20040301125239/http://www.undeadlords.net/forums/
 
 ---
-2007-11-05pleadforadmittance
-https://web.archive.org/web/20071106033919/http://forums.undeadlords.net/index.php?showforum=80
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071105pleadforadmittance.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
 
 
 
----
-2007-11-05worldofwarcraft
-https://web.archive.org/web/20071106033925/http://forums.undeadlords.net/index.php?showforum=81
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071105worldofwarcraft.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
+
+
+
 
 
 ---
-2007-11-05technicalanalysis
-https://web.archive.org/web/20071106033915/http://forums.undeadlords.net/index.php?showforum=57
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/timestamps/2007/2007-11/20071105technicalanalysis.PNG
-https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/archive/backups/2007/2007-11/20071105.zip
+
+2005-12-24
+https://web.archive.org/web/20051224100530/http://www.undeadlords.net/forums/index.php?showforum=2
+general chat
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224100530/http://www.undeadlords.net/forums/index.php?showforum=2
+wowrecruitment
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224093807/http://www.undeadlords.net/forums/index.php?showuser=50
+Rayven profile
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224114258/http://www.undeadlords.net/forums/index.php?showuser=3
+Zophar profile
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224101501/http://www.undeadlords.net/forums/index.php?showuser=21
+nyvia profile
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224100728/http://www.undeadlords.net/forums/index.php?showuser=259
+jaded profile
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224113714/http://www.undeadlords.net/forums/index.php?showforum=3
+flame board
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showforum=4
+story board
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224113804/http://www.undeadlords.net/forums/index.php?act=Members
+member list
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224092057/http://www.undeadlords.net/forums/index.php?act=calendar
+calendar
+
+---
+
+2005-11-03
+https://web.archive.org/web/20051103035945/http://www.undeadlords.net:80/forums/
+
+---
+
+2005-12-24
+https://web.archive.org/web/20051224103928/http://www.undeadlords.net/forums/index.php?showforum=26
+shadowbane recruitment
+
+---
+---
+---
+2005-12-24
+https://web.archive.org/web/20051224094955/http://www.undeadlords.net/forums/index.php?showuser=25
+nynedee profile
+
+---
+2005-12-24
+https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?showuser=91
+Dyvm Slorm profile
+
+---
+2005-12-24
+https://web.archive.org/web/20051224094546/http://www.undeadlords.net/forums/index.php?showuser=253
+dregs profile
+
+
+---
+2005-02-12
+https://web.archive.org/web/20050212085048/http://www.undeadlords.net:80/forums/
+
+---
+2005-10-25
+https://web.archive.org/web/20051025182332/http://www.undeadlords.net:80/forums/
 
 
 
 
--
+
+
+
+---------------
+
+2006-11-27
+https://web.archive.org/web/20061127213039/http://www.undeadlords.net:80/forums/
+
+---
+2006-11-16
+https://web.archive.org/web/20061117040221/http://www.undeadlords.net:80/forums/
+
+
+---
+2006-11-08
+https://web.archive.org/web/20061108163549/http://www.undeadlords.net:80/forums/
+
+---
+2006-10-26
+https://web.archive.org/web/20061026201254/http://www.undeadlords.net:80/forums/
+
+
+---
+2006-05-18
+https://web.archive.org/web/20060518091950/http://www.undeadlords.net:80/forums/
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
