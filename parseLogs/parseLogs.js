@@ -29,7 +29,7 @@ for(let i=0;i<arr.length;i++) {
 	`| [:link:](${arr[i].wbmURL}) | [:floppy_disk:](${arr[i].backupURL}) |\n`
 	listUniqueDates.add(arr[i].dateOfActivity);
 }
-require("fs").writeFileSync('../logs/2007/2007records.md', md);
+require("fs").writeFileSync('../logs/2007/README.md', md);
 
 
 //records.CSV of all data
