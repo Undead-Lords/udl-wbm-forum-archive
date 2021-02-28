@@ -32,7 +32,7 @@ TODO:
 
 web.archive.org for "http://www.undeadlords.net:80/forums/"
 
-- 2003
+- ~~2003~~
 - 2004
 - 2005
 - 2006
