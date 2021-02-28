@@ -1,15 +1,9 @@
-let one = require("fs").readFileSync("../logs/2007/2007-11/20071102.json", { encoding: "utf-8", flag: 'r'}).trim();
-let two = require("fs").readFileSync("../logs/2007/2007-11/20071104.json", { encoding: "utf-8", flag: 'r'}).trim();
-let three = require("fs").readFileSync("../logs/2007/2007-11/20071105.json", { encoding: "utf-8", flag: 'r'}).trim();
-let four = require("fs").readFileSync("../logs/2007/2007-11/20071105generalchat.json", { encoding: "utf-8", flag: 'r'}).trim();
-let five = require("fs").readFileSync("../logs/2007/2007-11/20071105technicalanalysis.json", { encoding: "utf-8", flag: 'r'}).trim();
-let six = require("fs").readFileSync("../logs/2007/2007-11/20071105worldofwarcraft.json", { encoding: "utf-8", flag: 'r'}).trim();
-let arr = JSON.parse(one).records.concat(
-	JSON.parse(two).records,
-	JSON.parse(three).records,
-	JSON.parse(four).records,
-	JSON.parse(five).records,
-	JSON.parse(six).records)
+
+
+let arr = JSON.parse(require("fs").readFileSync("../logs/2003/2003-11/20031104.json", { encoding: "utf-8", flag: 'r'}).trim()).records.concat(
+	JSON.parse(require("fs").readFileSync("../logs/2003/2003-12/20031206.json", { encoding: "utf-8", flag: 'r'}).trim()).records,
+	JSON.parse(require("fs").readFileSync("../logs/2003/2003-06/20030608.json", { encoding: "utf-8", flag: 'r'}).trim()).records,
+	)
 //import json above
 
 //gets the year for file names from the first entry
