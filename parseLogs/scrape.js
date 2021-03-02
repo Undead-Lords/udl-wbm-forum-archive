@@ -112,6 +112,19 @@ const parseHTML = (html, date) => {
 		}
 	}
 
+	//2006 online users ticker
+	regexp = /\d*\suser\(s\)\sactive\sin\sthe\spast\s15\sminutes/g;
+	if(pHtml.match(regexp) !== null) {
+		tempArr = [...pHtml.match(regexp)];
+		let tempDesc = tempArr[0].substring(0, tempArr[0].indexOf('u'))
+		if(Number(tempDesc) > 1) {
+			jsonArr.push({
+				"dateOfActivity": date,
+				"description": `${tempDesc} people using the forum at the time of the snapshot`
+			})
+		}
+	}
+
 	//2004 user made a post
 	regexp = /<span\sclass="gensmall">\w{3}\s\w{3}\s\d\d?,\s\d{4}\s\d\d?:\d\d\s\w\w<br><a\shref="\S{20,100}">.{2,20}<\/a>\s<a\shref="view/g;
 	if(pHtml.match(regexp) !== null) {
@@ -138,6 +151,29 @@ const parseHTML = (html, date) => {
 		}
 	}
 
+	//TODO: 2006 user made a post
+	regexp = /alt="Last\sPost"><\/a>\s<span>(\w{3}\s\d\d?\s\d{4}|\w{2,6}day),\s\d\d:\d\d\s\w\w<br><b>In:<\/b>&nbsp;<a\shref=".{20,150}"\stitle="Go\sto\sthe\sfirst\sunread\spost:\s.{2,80}">.{2,80}<\/a><br><b>By:<\/b>\s<a\shref=".{20,100}">.{2,20}<\/a><\/span><\/td>/g;
+	if(pHtml.match(regexp) !== null) {
+		tempArr = [...pHtml.match(regexp)];
+		for(let i = 0; i < tempArr.length; i++) {
+			let tempDesc = tempArr[i].match(/\?showuser=\d{1,3}">.{2,20}<\/a><\/span><\/td>/g)
+			tempDesc = `${tempDesc[0].substr(tempDesc[0].indexOf('>') + 1, tempDesc[0].length - 16 - (tempDesc[0].indexOf('>') + 1))} made a forum post`;
+			let tempDate = tempArr[i].match(/(\w{3}\s\d\d?\s\d{4}|\w{2,6}day),\s\d\d:\d\d\s\w\w/);
+			if(tempDate[0].substr(0, 5).toLowerCase() === 'today') {
+				tempDate = date;
+			} else if(tempDate[0].substr(0, 9).toLowerCase() === 'yesterday') {
+				tempDate = date.split('-');
+				tempDate[2] = Number(tempDate[2]) - 1;
+				tempDate = tempDate.join('-');
+			} else {
+				tempDate = tempDate[0].match(/\w{3}\s\d\d?\s\d{4}/)
+				tempDate = tempDate[0].split(' ');
+				tempDate = `${tempDate[2]}-${valMonth(tempDate[0])}-${valDay(tempDate[1])}`
+			}
+			jsonArr.push({"dateOfActivity": tempDate, "description": tempDesc})
+		}
+	}
+
 	//2004 most active date
 	regexp = /Most\susers\sever\sonline\swas\s<b>\d*<\/b>\son\s\w{3}\s\w{3}\s\d\d?,\s\d{4}/g;
 	if(pHtml.match(regexp) !== null) {
@@ -150,6 +186,24 @@ const parseHTML = (html, date) => {
 				"dateOfActivity": tempDate,
 				"description": `${tempDesc} highest record of people using the forums on ${tempDate}`
 			})
+		}
+	}
+
+	//TODO: 2006 most active date
+	//<\/a><\/b><br>Most\susers\sever\sonline\swas\s<b>\d*<\/b>\son\s<b>\w{3}\s\d\d?\s\d{4}
+	regexp = /<\/a><\/b><br>Most\susers\sever\sonline\swas\s<b>\d*<\/b>\son\s<b>\w{3}\s\d\d?\s\d{4}/g;
+	if(pHtml.match(regexp) !== null) {
+		console.log('most active date found')
+		tempArr = [...pHtml.match(regexp)];
+		let tempDesc = tempArr[0].substring(42, tempArr[0].lastIndexOf("<\/b>"))
+		console.log(tempDesc);
+		if(Number(tempDesc) > 1) {
+			let tempDate = tempArr[0].match(/\w{3}\s\d\d?\s\d{4}/);
+			tempDate = `${tempDate[0].substr(-4)}-${valMonth(tempDate[0].substr(0, 3))}-${tempDate[0].substr(4, 2)}`
+			jsonArr.push({
+				"dateOfActivity": tempDate,
+				"description": `${tempDesc} highest record of people using the forums on ${tempDate}`
+			});
 		}
 	}
 
@@ -215,8 +269,7 @@ const valMonth = (month) => {
 			return '12';
 	}
 }
-const valYear = (year) => {
-}
+
 const valDay = (day) => {
 	day = day.split('');
 	day = day.map(x => {
@@ -234,23 +287,6 @@ const valDay = (day) => {
 
 
 let list = [
-	"https://web.archive.org/web/20051224100530/http://www.undeadlords.net/forums/index.php?showforum=2",
-	"https://web.archive.org/web/20051224085618/http://www.undeadlords.net/forums/index.php?showforum=27",
-	"https://web.archive.org/web/20051224093807/http://www.undeadlords.net/forums/index.php?showuser=50",
-	"https://web.archive.org/web/20051224114258/http://www.undeadlords.net/forums/index.php?showuser=3",
-	"https://web.archive.org/web/20051224101501/http://www.undeadlords.net/forums/index.php?showuser=21",
-	"https://web.archive.org/web/20051224100728/http://www.undeadlords.net/forums/index.php?showuser=259",
-	"https://web.archive.org/web/20051224113714/http://www.undeadlords.net/forums/index.php?showforum=3",
-	"https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showforum=4",
-	"https://web.archive.org/web/20051224113804/http://www.undeadlords.net/forums/index.php?act=Members",
-	"https://web.archive.org/web/20051224092057/http://www.undeadlords.net/forums/index.php?act=calendar",
-	"https://web.archive.org/web/20051103035945/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20051224103928/http://www.undeadlords.net/forums/index.php?showforum=26",
-	"https://web.archive.org/web/20051224094955/http://www.undeadlords.net/forums/index.php?showuser=25",
-	"https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?showuser=91",
-	"https://web.archive.org/web/20051224094546/http://www.undeadlords.net/forums/index.php?showuser=253",
-	"https://web.archive.org/web/20050212085048/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20051025182332/http://www.undeadlords.net:80/forums/",
 	"https://web.archive.org/web/20061127213039/http://www.undeadlords.net:80/forums/",
 	"https://web.archive.org/web/20061117040221/http://www.undeadlords.net:80/forums/",
 	"https://web.archive.org/web/20061108163549/http://www.undeadlords.net:80/forums/",
@@ -259,9 +295,25 @@ let list = [
 	"https://web.archive.org/web/20040301125239/http://www.undeadlords.net/forums/"
 ]
 
-for(let i = 1; i < list.length - 1; i++) {
-	setTimeout(() => {
-		console.log(`puppet #${i} starting`);
-		parseURL(list[i]);
-	}, 30000 * i);
+//for(let i = 1; i < list.length - 1; i++) {
+//	setTimeout(() => {
+//		console.log(`puppet #${i} starting`);
+//		parseURL(list[i]);
+//	}, 30000 * i);
+//}
+//parseURL("https://web.archive.org/web/20040301125239/http://www.undeadlords.net/forums/")
+
+
+const helper = async (arr) => {
+	return new Promise(async (resolve) => {
+		for(let item of arr) {
+			console.log(item);
+			await parseURL(item);
+		}
+		resolve(true);
+	})
 }
+async function bronnIsFruity(arr) {
+	await helper(arr);
+}
+bronnIsFruity(list);

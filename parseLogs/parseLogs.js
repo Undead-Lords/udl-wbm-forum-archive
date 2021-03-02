@@ -1,8 +1,10 @@
 
 
-let arr = JSON.parse(require("fs").readFileSync("../logs/2003/2003-11/20031104.json", { encoding: "utf-8", flag: 'r'}).trim()).records.concat(
-	JSON.parse(require("fs").readFileSync("../logs/2003/2003-12/20031206.json", { encoding: "utf-8", flag: 'r'}).trim()).records,
-	JSON.parse(require("fs").readFileSync("../logs/2003/2003-06/20030608.json", { encoding: "utf-8", flag: 'r'}).trim()).records,
+let arr = JSON.parse(require("fs").readFileSync("../logs/2006/2006-05/20060518-0.json", { encoding: "utf-8", flag: 'r'}).trim()) .concat(
+	JSON.parse(require("fs").readFileSync("../logs/2006/2006-10/20061026-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2006/2006-11/20061108-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2006/2006-11/20061117-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2006/2006-11/20061127-0.json", { encoding: "utf-8", flag: 'r'}).trim())
 	)
 //import json above
 
