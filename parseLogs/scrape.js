@@ -163,7 +163,7 @@ const parseHTML = (html, date) => {
 				tempDate = date;
 			} else if(tempDate[0].substr(0, 9).toLowerCase() === 'yesterday') {
 				tempDate = date.split('-');
-				tempDate[2] = Number(tempDate[2]) - 1;
+				tempDate[2] = valDay(Number(tempDate[2]) - 1);
 				tempDate = tempDate.join('-');
 			} else {
 				tempDate = tempDate[0].match(/\w{3}\s\d\d?\s\d{4}/)
