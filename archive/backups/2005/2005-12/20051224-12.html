@@ -1,0 +1,1993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app203.us.archive.org';v.server_ms=644;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=bQvHU8mx" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.undeadlords.net:80/forums/index.php?showuser=91","20051224092409","https://web.archive.org/","web","/_static/",
+	      "1135416249");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=bsmaklHF">
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ">
+<!-- End Wayback Rewrite JS Include -->
+ 
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="/web/20051224092409im_/http://www.undeadlords.net/forums/favicon.ico">
+<title>Viewing Profile</title>
+ 
+<style type="text/css">
+	/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+	height: 100%;
+}
+
+body{ 
+	background: #060606;
+	color: #FFF;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 11px;
+	line-height: 110%;
+	margin: 0;
+	padding: 0; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+	height: 100%;
+}
+
+table,
+tr,
+td{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	line-height: 110%;
+}
+
+table{ /* makes all tables 100% wide */
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 0px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0px; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+.userlist
+{
+	background: #464646;
+	border: 0;
+	color: #FFF;
+	padding: 4px;
+}
+
+.userlist a:link,
+.userlist a:visited
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.userlist a:hover,
+.userlist a:active
+{
+	color: #EEE;
+	text-decoration: none;
+}
+
+legend {
+	color: #EEE;
+	margin-right: 2px;
+}
+
+.rowborder {
+	background: #464646;
+	border-bottom: 1px solid #000;
+	padding: 4px;
+}
+
+.userinfo {
+	background: #464646;
+	border-top: 1px solid #000;
+	padding: 3px;
+}
+
+.post1,
+.post2 {
+	border-top: 1px solid #000;
+	padding: 3px;
+}
+
+.border {
+	background: url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/border.gif) repeat-y right;
+	width: 11px;
+	height: 100%;
+	margin: 1px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.quickreply {
+	background: #464646;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #BBB;
+	text-decoration: none;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 0 11px; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 750px is a common fixed resolution size */
+}
+
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+ 
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: transparent;
+	border: 1px solid #000;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #464646;
+}
+
+
+.pagecurrent{
+	background: #464646;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #000;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* button effect for some links */
+.fauxbutton{
+	background: #666666;
+	border: 1px solid #868686;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #FFF !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #FFF;
+	line-height: 110%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* ================================================= */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #464646;
+	border: 1px solid #000;
+	color: #000;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 120%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #262626 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #000;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #000;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #000;
+}
+
+.fullimagewrap{
+	background: #363636;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #363636;
+	border: 0 !important;
+	border-bottom: 1px solid #000 !important;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #363636 !important;
+	border: 0 !important;
+	border-top: 1px solid #000 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #363636 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #363636 !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #363636 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #000;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood { 
+	color: #DD0000;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #00DD00;
+font-weight: bold;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #464646;
+	line-height: 120%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #464646;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #FFF; 
+	font-size: 10px;
+	line-height: 120%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:110%;
+}
+
+.postcolor{ 
+	font-size: 12px; 
+	line-height: 130%;
+}
+
+.normalname{ 
+	color: #FFF;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post1,
+.bg1,
+.post2,
+.bg3{ 
+	background: #464646;
+	border-color: #000;
+}
+
+.row2shaded,
+.post1shaded,
+.row4shaded,
+.post2shaded{
+	background-color: #454545;
+}
+
+.row1,
+.row2,
+.darkrow1,
+.darkrow3{ 
+	background: #464646; 
+	padding: 3px;
+	border-bottom: 1px solid #000;
+}
+
+.darkrow1 td,
+.darkrow3 td {
+	padding: 3px;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #464646;
+	border: 1px solid #000;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+	color: #FFF;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #FFF;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	line-height: 130%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/*==================================================*/
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #464646;
+	border: 1px solid #000;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #464646;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #000;
+	color: FFF;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #565656;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	border: 1px solid #363636;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #464646;
+}
+
+.celltoday,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+
+input,
+textarea,
+select{
+	background: #565656;
+	border: 1px solid #767676;
+	color: #FFF;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 3px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+input.check {
+	margin: -1px;
+	border: 0px;
+	background: transparent;
+}
+
+select{
+	border: 0;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #565656;
+	border: 1px solid #767676;
+	color: #FFF;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #666;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+}
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#464646;
+	border: 1px solid #000;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #464646 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub2.gif);
+	border: 1px solid #000; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #FFF;
+	font-weight: bold;
+	padding: 5px;
+	padding-bottom:4px;
+}
+
+.formtable td.formstrip{
+	background: #464646;
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #363636 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #FFF;
+	border-bottom: 0;
+	border-left: 4px solid #FFF;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 8px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: transparent;
+	border: 1px dotted #FFF;
+	border-left: 4px solid #FFF;
+	border-top: 0;
+	color: #DDD;
+	padding: 4px;
+	margin: 0 auto 8px auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #363636 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/css_img_code.gif) no-repeat right;
+	color: #FFF;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+	width: 98%;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: transparent;
+	border: 1px dotted #FFF;
+	color: #DDD;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: transparent; 
+	border: 1px solid #FFF; 
+	color: #DDD; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, Courier New, Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #000;
+	padding: 0; 
+	margin: 0; 
+	border: 0px;
+}
+
+.borderwrapm{
+	margin: 2px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: transparent url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_cat.gif);
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 8px;
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #CCC;
+	text-decoration: none;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	border-bottom: 1px solid #000;
+	color: #FFF; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited { 
+	background: transparent;
+	color: #EEE;
+	text-decoration: underline; 
+}
+
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover {
+	background: transparent;
+	color: #BBB;
+	text-decoration: none;
+}
+
+.borderwrap h4{
+	background: transparent;
+	border: 1px solid #000;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: transparent;
+	border: 1px solid #000;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #464646 !important; 
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+	border-top: 1px solid #000;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #464646 !important;
+	border: 0;
+	border-top: 1px solid #000;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #464646;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #363636;
+	height: 4px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.newslink{
+	background: #262626;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 0 0 0 4px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #DDD;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #666666;
+	border: 1px solid #868686;
+	color: #FFF;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.fieldwrap{
+	background: #464646;
+	border: 1px solid #000;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #464646;
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap,
+#pmnotewrap{
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+#pmnotewrap{
+	line-height: 110%;
+	margin: 0 0 5px 0;
+background: #464646;
+}
+
+.errorwrap h4,
+#pmnotewrap h4{
+	border-left: 0;
+	border-right: 0;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p,
+#pmnotewrap p{
+	border: 0;
+	color: #FFF;
+	margin: 0;
+	padding: 8px;
+}
+
+#pmnotewrap p.pmavatar{
+	float: left;
+}
+
+#pmnotewrap p.pmnotefoot{
+	background: #464646;
+	text-align: right;
+}
+
+#pmnotewrap a:link, 
+#pmnotewrap  a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: underline;
+}
+
+#pmnotewrap a:hover, 
+#pmnotewrap a:active{
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: none;
+}
+
+.ruleswrap{
+	background: #464646;
+	border: 1px solid #000;
+	color: #FFF; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #464646;
+	border: 1px solid #000;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #363636;
+	border-bottom: 1px solid #000;
+	color: #FFF;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #363636;
+	border-top: 1px solid #000;
+	text-align: center;
+}
+
+
+#gfooter{
+	background: #363636;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #FFF;
+}
+
+#logostrip{ 
+	background: #464646 url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_back.gif);
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#logostrip img {
+	float: left;
+}
+
+#logostrip2 {
+	padding-top: 50px;
+	float: right;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#logostrip2 a:link,
+#logostrip2 a:visited {
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#logostrip2 a:hover,
+#logostrip2 a:active {
+	color: #CCC;
+	font-weight: bold;
+}
+
+#submenu{ 
+	background: transparent url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	border-top: 0;
+	color: #FFF; 
+	margin: 0; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #464646;
+	margin: 1px 0 4px 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinksguest{ 
+	background: #464646;
+}
+
+#submenu p,
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0 !important;
+	padding: 6px 0 6px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#submenu p.home,
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#submenu a:link, 
+#submenu  a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	padding: 0 5px 0 5px;
+}
+
+#submenu a:hover, 
+#submenu a:active{
+	background: transparent; 
+	color: #DDD; 
+}
+#navstrip{ 
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	line-height: 1.2;
+}
+
+#navstrip a:link, 
+#navstrip a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #BBB; 
+	text-decoration: none;
+}
+
+.toplinks{
+	background: transparent;
+	color: #FFF;
+	margin: 3px 7px;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #FFF;
+	font-size: 10px;
+}
+
+.copyright{ 
+	background: transparent;
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+.print {
+	background: #FFF;
+}
+
+.print a:link,
+#print a:link {
+	color: #036;
+}
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+	background: #FFF;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+/* ----- New Styles - IPB 2.1 --------------------------------- */
+
+.popupmenu{
+	background: #666;
+	border: 1px solid #000;
+	text-align:left;
+	font-size:10px;
+	white-space:nowrap;
+}
+
+.popupmenu-item{
+	padding: 2px;
+	white-space: nowrap;
+	border-bottom: 1px solid #000;
+}
+
+.popupmenu-item-last{
+	padding: 2px;
+	white-space: nowrap;
+}
+
+.popmenubutton{
+	background: #565656;
+	/*width: 110px;*/
+	white-space: nowrap;
+	color: #EEE;
+	font-weight: bold;
+	float: right;
+	text-align: center;
+	margin: 0;
+	font-size: 10px;
+	padding: 2px 5px 3px 5px;
+}
+
+.popmenubutton a:link,
+.popmenubutton a:visited,
+.popupmenu-item a:link,
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link,
+.popupmenu-item-last a:visited{
+	color: #EEE;
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popupmenu-item a:hover,
+.popupmenu-item-last a:hover{
+	color: #CCC;
+	text-decoration: none;
+}
+
+.popupmenu-category{
+	background: transparent url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	color: #FFF;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 1px;
+}
+
+.input-warn,
+.input-green,
+input,
+textarea,
+select{
+	color: #FFF;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.input-warn,
+.input-warn-content{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+.input-text{
+	color: #900;
+}
+
+.tabon{
+	border:1px solid #999;
+	border-bottom: 0;
+	background-color:#565656;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff{
+	border: 1px solid #464646;
+	border-bottom: 0;
+	background-color: #363636;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link,
+.tabon a:visited,
+.tabon a:active{
+	text-decoration:none;
+	color: #CCC;
+}
+
+.taboff a:link,
+.taboff a:visited,
+.taboff a:active{
+	text-decoration:none;
+	color: #FFF;
+}
+
+.mya-back{
+	background: #161616;
+	margin:1px;
+}
+
+.mya-content{
+	background: #565656;
+	padding:8px;
+	margin:0px;
+	border: 1px solid #868686;
+}
+
+.rteimage {
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteImageRaised {
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteImageLowered {
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteimage:hover {
+	background: #EBEBEB;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+}
+
+.rteBack {
+	background: #D3D3D3;
+	border: 1px outset;
+	letter-spacing: 0;
+	padding: 2px;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombutton {
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background: #565656;
+	color: #FFF;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombuttonon {
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background: #767676;
+	color: #FFF;
+}
+
+.rtebuttonbar1 {
+	background: url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-bottom:0px;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+	color: #000;
+}
+
+.rtebuttonbar2 {
+	background: url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-top:1px solid gray;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+	color: #000;
+}
+
+.rtebuttonbar1 tbody tr td,
+.rtebuttonbar1 tr td,
+.rtebuttonbar2 tbody tr td,
+.rtebuttonbar2 tr td,
+.rteBack tbody tr td,
+.rteBack tr td
+{
+	padding: 0;
+}
+
+.rteDiv {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+
+.rteiframe
+{
+	border:1px solid #767676;
+	background: #565656;
+}
+
+.rteselectbox
+{
+	font-size:11px;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #565656;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #666;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #767676;
+	background: #464646;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #767676;
+	padding:4px;
+}
+
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	line-height: 120%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 3px */
+padding: 3px;
+}
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #565656;
+	color: #FFF;
+}
+
+.maintitle td {
+	font-weight: bold;
+}
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+#logographic{
+	background: transparent url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+</style> 
+ 
+</head> 
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20051224092409/http%3A//www.undeadlords.net/forums/index.php%3Fshowuser%3D91" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.undeadlords.net/forums/index.php?showuser=91","20051224092409",1996,"/_static/",["/_static/css/banner-styles.css?v=bsmaklHF","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<table cellspacing="0" cellpadding="0" height="100%">
+<tbody><tr><td class="border" nowrap="nowrap"><!--nocontent--></td>
+<td id="ipbwrapper" valign="top">
+<!--ipb.javascript.start-->
+<script type="text/javascript">
+ //<![CDATA[
+ var ipb_var_st            = "";
+ var ipb_lang_tpl_q1       = "Please enter a page number to jump to between 1 and";
+ var ipb_var_s             = "";
+ var ipb_var_phpext        = "php";
+ var ipb_var_base_url      = "https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?s=&";
+ var ipb_var_image_url     = "style_images/charcoal";
+ var ipb_input_f           = "";
+ var ipb_input_t           = "";
+ var ipb_input_p           = "";
+ var ipb_var_cookieid      = "udl_owns";
+ var ipb_var_cookie_domain = "undeadlords.net";
+ var ipb_var_cookie_path   = "";
+ var ipb_md5_check         = "880ea6a14ea49e853634fbdc5015a024";
+ var ipb_new_msgs          = 0;
+ var use_enhanced_js       = 0;
+ //]]>
+</script>
+<script type="text/javascript" src="/web/20051224092409js_/http://www.undeadlords.net/forums/jscripts/ipb_global.js"></script>
+<script type="text/javascript" src="/web/20051224092409js_/http://www.undeadlords.net/forums/jscripts/ips_menu.js"></script>
+<script type="text/javascript" src="/web/20051224092409js_/http://www.undeadlords.net/forums/style_images/charcoal/folder_js_skin/ips_menu_html.js"></script>
+<!--ipb.javascript.end-->
+	<table id="logostrip" cellpadding="0" height="100"><tbody><tr><td width="100%"><a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php"><!--ipb.logo.start--><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/udl_logo.jpg" alt="IPB" style="vertical-align:top" border="0"><!--ipb.logo.end--></a>
+<div id="logostrip2">
+<!--ipb.rightlinks.start-->
+<!---->
+	<a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Help">Help</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Search&amp;f=">Search</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Members">Members</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=calendar">Calendar</a>&nbsp;<!--IBF.CHATLINK--><!--IBF.TSLLINK-->
+		<!--ipb.rightlinks.end-->
+</div></td></tr></tbody></table> 
+<div id="userlinksguest">
+	<p class="pcen"><b>Welcome Guest</b> ( <a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=00">Log In</a> | <a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Reg&amp;CODE=00">Register</a> )	</p>
+</div>
+<div id="navstrip"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/nav.gif" border="0" alt=">">&nbsp;<a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=idx">The Undead Lords</a>&nbsp;»&nbsp;Viewing Profile<font color="#000000" style="font-size: 0px;">&nbsp;&nbsp;·&nbsp;Skin created by No1 1000</font></div>
+<!--IBF.NEWPMBOX-->
+<script type="text/javascript" src="/web/20051224092409js_/http://www.undeadlords.net/forums/jscripts/ipb_profile.js"></script>
+<div class="borderwrap">
+	<div class="maintitle" style="height:24px">
+	 <div align="right">
+	   <div class="popmenubutton" id="profile-options" style="cursor: pointer;"><a href="#profileoptions">Profile Options</a> <img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/menu_action_down.gif" alt="V" title="Open Menu" border="0"></div>
+	 </div>
+	 <div style="float:left">Viewing Profile: Dyvm Slorm</div>
+	</div>
+	<table class="ipbtable">
+		<tbody><tr>
+			<td width="1%" nowrap="nowrap" valign="top" class="row1">
+				<div id="profilename">Dyvm Slorm</div>
+				<br>
+				<div></div>
+				<div>Skeleton Warrior</div>
+				<div><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/pip.gif" border="0" alt="*"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/pip.gif" border="0" alt="*"></div>
+				<br>
+				<div class="postdetails">
+					Member Group: Alliance Leaders<br>
+					Joined: 12-August 05
+				</div>
+				<!--{WARN_LEVEL}-->
+			</td>
+			<td width="1%" align="right" class="row1"></td>
+		</tr>
+	</tbody></table>
+</div>
+<br>
+<table class="ipbtable">
+	<tbody><tr>
+		<!-- STATS -->
+		<td width="50%" valign="top" style="padding-left: 0;">
+			<table width="100%" class="borderwrap">
+				<tbody><tr>
+					<td align="center" colspan="2" class="maintitle">Active Stats</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>User's local time</b></td>
+					<td class="row1">Dec 24 2005, 03:24 AM</td>
+				</tr>
+				<tr>
+					<td class="row2" width="30%" valign="top"><b>Total Cumulative Posts</b></td>
+					<td width="70%" class="row1"><b>35</b>
+					<br>( 0.3 posts per day / 0.33% of total forum posts )
+					</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Most active in</b></td>
+					<td class="row1"><a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=SF&amp;f=4"><b>Story Board</b></a><br>( 4 posts / 11% of this member's active posts )</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Last Active</b></td>
+					<td class="row1">Yesterday, 09:56 AM</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Status</b></td>
+					<td class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/p_offline.gif" border="0" alt="User is offline"> (Offline)</td>
+				</tr>
+			</tbody></table>
+		</td>
+		<!-- Communication -->
+		<td width="50%" valign="top" style="padding-right: 0; border-left: 1px solid #000;">
+			<table width="100%" class="borderwrap">
+				<tbody><tr>
+					<td align="center" colspan="2" class="maintitle">Communicate</td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/profile_aim.gif" border="0" alt="AIM"></td>
+					<td width="99%" class="row2"><i>No Information</i></td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/profile_yahoo.gif" border="0" alt="Yahoo"></td>
+					<td width="99%" class="row2"><i>No Information</i></td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/profile_icq.gif" border="0" alt="ICQ"></td>
+					<td width="99%" class="row2"><i>No Information</i></td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/profile_msn.gif" border="0" alt="MSN"></td>
+					<td width="99%" class="row2"><i>No Information</i></td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/f_msg.gif" border="0" alt="Contact"></td>
+					<td width="99%" class="row2"><a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Msg&amp;CODE=4&amp;MID=91">Send a Personal Message</a></td>
+				</tr>
+				<tr>
+					<td width="1%" class="row1"><img src="/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/f_msg.gif" border="0" alt="Contact"></td>
+					<td width="99%" class="row2"><a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Mail&amp;CODE=00&amp;MID=91">Send an Email</a></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<!-- END CONTENT ROW 1 -->
+		<!-- information -->
+	</tr>
+	<tr>
+		<td width="50%" valign="top" style="padding-left: 0;">
+			<table width="100%" class="borderwrap">
+				<tbody><tr>
+					<td align="center" colspan="2" class="maintitle">Information</td>
+				</tr>				<tr>
+					<td class="row2" width="30%" valign="top"><b>Home Page</b></td>
+					<td width="70%" class="row1"><i>No Information</i></td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Birthday</b></td>
+					<td class="row1">17 July 1968</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Location</b></td>
+					<td class="row1">Minnesota</td>
+				</tr>
+				<tr>
+					<td class="row2" valign="top"><b>Interests</b></td>
+					<td class="row1"><i>No Information</i></td>
+				</tr>
+			</tbody></table>
+		</td>
+		<!-- Profile -->
+		<td width="50%" valign="top" style="padding-right: 0; border-left: 1px solid #000;">
+			<table width="100%" class="borderwrap">
+				<tbody><tr>
+					<td align="center" colspan="2" class="maintitle">Additional Information</td>
+				</tr>
+				<tr>
+	<td colspan="2" align="center" class="row2"><i>No Information</i></td>
+</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table><!--MEM OPTIONS-->
+<script type="text/javascript">
+//<![CDATA[
+  var dname_title = "Member's Display Name History";
+  menu_build_menu(
+  "profile-options",
+  new Array(
+  			 '<img src="style_images/charcoal/profile_item.gif" border="0" />' + " <a href='https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Search&amp;CODE=getalluser&amp;mid=91'>Find member's posts</a>",
+  			 '<img src="style_images/charcoal/profile_item.gif" border="0" />' + " <a href='https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Search&amp;CODE=gettopicsuser&amp;mid=91'>Find member's topics</a>",'<img src="style_images/charcoal/profile_item.gif" border="0" />' + " <a href='#' onclick='return profile_dname_history(91)'>Member's Display Name History</a>",			'<img src="style_images/charcoal/profile_item.gif" border="0" />' + " <a href='https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Msg&amp;CODE=02&amp;MID=91'>Add to contact list</a>"
+		) );
+//]]>
+</script>
+<div class="popupmenu" id="profile-options_menu" style="display: none; z-index: 100; position: absolute; left: 0px; top: 0px;">
+<div class="popupmenu-item">
+<img src="style_images/charcoal/profile_item.gif" border="0"> <a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Search&amp;CODE=getalluser&amp;mid=91">Find member's posts</a>
+</div>
+<div class="popupmenu-item">
+<img src="style_images/charcoal/profile_item.gif" border="0"> <a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Search&amp;CODE=gettopicsuser&amp;mid=91">Find member's topics</a>
+</div>
+<div class="popupmenu-item">
+<img src="style_images/charcoal/profile_item.gif" border="0"> <a href="#" onclick="return profile_dname_history(91)">Member's Display Name History</a>
+</div>
+<div class="popupmenu-item-last">
+<img src="style_images/charcoal/profile_item.gif" border="0"> <a href="https://web.archive.org/web/20051224092409/http://www.undeadlords.net/forums/index.php?act=Msg&amp;CODE=02&amp;MID=91">Add to contact list</a>
+</div>
+
+</div>
+
+
+<table cellspacing="0" id="gfooter">
+	<tbody><tr>
+		<td width="45%"> </td>
+		<td width="10%" align="center" nowrap="nowrap"><a href="lofiversion/index.php"><b>Lo-Fi Version</b></a></td>
+		<td width="45%" align="right" nowrap="nowrap">Time is now: 24th December 2005 - 03:24 AM</td>
+	</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+menu_do_global_init();//]]>
+</script>
+ 
+<!-- Copyright Information -->
+        				  <div align="center" class="copyright">
+        				  	<a href="https://web.archive.org/web/20051224092409/http://www.invisionboard.com/" style="text-decoration:none" target="_blank">Invision Power Board</a>
+        				  	v2.1.1 © 2005 &nbsp;IPS, Inc.
+        				  </div>
+		<!-- / Copyright -->
+</td>
+<td class="border" nowrap="nowrap" style="background: url(/web/20051224092409im_/http://www.undeadlords.net/forums/style_images/charcoal/border.gif) repeat-y left;"><!--nocontent--></td></tr>
+</tbody></table>
+ 
+
+<!--
+playback timings (ms):
+  captures_list: 421.949
+  exclusion.robots: 0.401
+  exclusion.robots.policy: 0.389
+  RedisCDXSource: 11.394
+  esindex: 0.012
+  LoadShardBlock: 385.763 (3)
+  PetaboxLoader3.resolve: 286.396 (3)
+  PetaboxLoader3.datanode: 268.859 (4)
+  CDXLines.iter: 20.255 (3)
+  load_resource: 209.729
+--></body></html>

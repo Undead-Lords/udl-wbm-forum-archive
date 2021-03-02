@@ -1,0 +1,2195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app202.us.archive.org';v.server_ms=416;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=bQvHU8mx" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.undeadlords.net:80/forums/index.php?showforum=4","20051224101428","https://web.archive.org/","web","/_static/",
+	      "1135419268");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=bsmaklHF">
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ">
+<!-- End Wayback Rewrite JS Include -->
+ 
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="/web/20051224101428im_/http://www.undeadlords.net/forums/favicon.ico">
+<title>The Undead Lords -&gt; Story Board</title>
+ 
+<style type="text/css">
+	/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+	height: 100%;
+}
+
+body{ 
+	background: #060606;
+	color: #FFF;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 11px;
+	line-height: 110%;
+	margin: 0;
+	padding: 0; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+	height: 100%;
+}
+
+table,
+tr,
+td{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	line-height: 110%;
+}
+
+table{ /* makes all tables 100% wide */
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 0px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0px; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+.userlist
+{
+	background: #464646;
+	border: 0;
+	color: #FFF;
+	padding: 4px;
+}
+
+.userlist a:link,
+.userlist a:visited
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.userlist a:hover,
+.userlist a:active
+{
+	color: #EEE;
+	text-decoration: none;
+}
+
+legend {
+	color: #EEE;
+	margin-right: 2px;
+}
+
+.rowborder {
+	background: #464646;
+	border-bottom: 1px solid #000;
+	padding: 4px;
+}
+
+.userinfo {
+	background: #464646;
+	border-top: 1px solid #000;
+	padding: 3px;
+}
+
+.post1,
+.post2 {
+	border-top: 1px solid #000;
+	padding: 3px;
+}
+
+.border {
+	background: url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/border.gif) repeat-y right;
+	width: 11px;
+	height: 100%;
+	margin: 1px;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.quickreply {
+	background: #464646;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #BBB;
+	text-decoration: none;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 0 11px; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 750px is a common fixed resolution size */
+}
+
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+ 
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: transparent;
+	border: 1px solid #000;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #464646;
+}
+
+
+.pagecurrent{
+	background: #464646;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #000;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* button effect for some links */
+.fauxbutton{
+	background: #666666;
+	border: 1px solid #868686;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #FFF !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #FFF;
+	line-height: 110%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* ================================================= */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #464646;
+	border: 1px solid #000;
+	color: #000;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 120%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #262626 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #000;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #000;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #000;
+}
+
+.fullimagewrap{
+	background: #363636;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #363636;
+	border: 0 !important;
+	border-bottom: 1px solid #000 !important;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #363636 !important;
+	border: 0 !important;
+	border-top: 1px solid #000 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #363636 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #363636 !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #363636 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #000;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood { 
+	color: #DD0000;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #00DD00;
+font-weight: bold;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #464646;
+	line-height: 120%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #464646;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #FFF; 
+	font-size: 10px;
+	line-height: 120%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:110%;
+}
+
+.postcolor{ 
+	font-size: 12px; 
+	line-height: 130%;
+}
+
+.normalname{ 
+	color: #FFF;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post1,
+.bg1,
+.post2,
+.bg3{ 
+	background: #464646;
+	border-color: #000;
+}
+
+.row2shaded,
+.post1shaded,
+.row4shaded,
+.post2shaded{
+	background-color: #454545;
+}
+
+.row1,
+.row2,
+.darkrow1,
+.darkrow3{ 
+	background: #464646; 
+	padding: 3px;
+	border-bottom: 1px solid #000;
+}
+
+.darkrow1 td,
+.darkrow3 td {
+	padding: 3px;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #464646;
+	border: 1px solid #000;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+	color: #FFF;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #FFF;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	line-height: 130%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/*==================================================*/
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #464646;
+	border: 1px solid #000;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #464646;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #000;
+	color: FFF;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #565656;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	border: 1px solid #363636;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #464646;
+}
+
+.celltoday,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+
+input,
+textarea,
+select{
+	background: #565656;
+	border: 1px solid #767676;
+	color: #FFF;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 3px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+input.check {
+	margin: -1px;
+	border: 0px;
+	background: transparent;
+}
+
+select{
+	border: 0;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #565656;
+	border: 1px solid #767676;
+	color: #FFF;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #666;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+}
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#464646;
+	border: 1px solid #000;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #464646 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub2.gif);
+	border: 1px solid #000; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #FFF;
+	font-weight: bold;
+	padding: 5px;
+	padding-bottom:4px;
+}
+
+.formtable td.formstrip{
+	background: #464646;
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #363636 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #FFF;
+	border-bottom: 0;
+	border-left: 4px solid #FFF;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 8px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: transparent;
+	border: 1px dotted #FFF;
+	border-left: 4px solid #FFF;
+	border-top: 0;
+	color: #DDD;
+	padding: 4px;
+	margin: 0 auto 8px auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #363636 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/css_img_code.gif) no-repeat right;
+	color: #FFF;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+	width: 98%;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: transparent;
+	border: 1px dotted #FFF;
+	color: #DDD;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: transparent; 
+	border: 1px solid #FFF; 
+	color: #DDD; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, Courier New, Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #000;
+	padding: 0; 
+	margin: 0; 
+	border: 0px;
+}
+
+.borderwrapm{
+	margin: 2px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: transparent url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_cat.gif);
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 8px;
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #CCC;
+	text-decoration: none;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	border-bottom: 1px solid #000;
+	color: #FFF; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited { 
+	background: transparent;
+	color: #EEE;
+	text-decoration: underline; 
+}
+
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover {
+	background: transparent;
+	color: #BBB;
+	text-decoration: none;
+}
+
+.borderwrap h4{
+	background: transparent;
+	border: 1px solid #000;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: transparent;
+	border: 1px solid #000;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #464646 !important; 
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+	border-top: 1px solid #000;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #464646 !important;
+	border: 0;
+	border-top: 1px solid #000;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #464646;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #363636;
+	height: 4px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.newslink{
+	background: #262626;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 0 0 0 4px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #DDD;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #666666;
+	border: 1px solid #868686;
+	color: #FFF;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #FFF;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.fieldwrap{
+	background: #464646;
+	border: 1px solid #000;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #464646;
+	border: 1px solid #000;
+	border-left: 0;
+	border-right: 0;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap,
+#pmnotewrap{
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+#pmnotewrap{
+	line-height: 110%;
+	margin: 0 0 5px 0;
+background: #464646;
+}
+
+.errorwrap h4,
+#pmnotewrap h4{
+	border-left: 0;
+	border-right: 0;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p,
+#pmnotewrap p{
+	border: 0;
+	color: #FFF;
+	margin: 0;
+	padding: 8px;
+}
+
+#pmnotewrap p.pmavatar{
+	float: left;
+}
+
+#pmnotewrap p.pmnotefoot{
+	background: #464646;
+	text-align: right;
+}
+
+#pmnotewrap a:link, 
+#pmnotewrap  a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: underline;
+}
+
+#pmnotewrap a:hover, 
+#pmnotewrap a:active{
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: none;
+}
+
+.ruleswrap{
+	background: #464646;
+	border: 1px solid #000;
+	color: #FFF; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #464646;
+	border: 1px solid #000;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #363636;
+	border-bottom: 1px solid #000;
+	color: #FFF;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #363636;
+	border-top: 1px solid #000;
+	text-align: center;
+}
+
+
+#gfooter{
+	background: #363636;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #FFF;
+}
+
+#logostrip{ 
+	background: #464646 url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_back.gif);
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#logostrip img {
+	float: left;
+}
+
+#logostrip2 {
+	padding-top: 50px;
+	float: right;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#logostrip2 a:link,
+#logostrip2 a:visited {
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#logostrip2 a:hover,
+#logostrip2 a:active {
+	color: #CCC;
+	font-weight: bold;
+}
+
+#submenu{ 
+	background: transparent url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	border-top: 0;
+	color: #FFF; 
+	margin: 0; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #464646;
+	margin: 1px 0 4px 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinksguest{ 
+	background: #464646;
+}
+
+#submenu p,
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0 !important;
+	padding: 6px 0 6px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#submenu p.home,
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#submenu a:link, 
+#submenu  a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	padding: 0 5px 0 5px;
+}
+
+#submenu a:hover, 
+#submenu a:active{
+	background: transparent; 
+	color: #DDD; 
+}
+#navstrip{ 
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	line-height: 1.2;
+}
+
+#navstrip a:link, 
+#navstrip a:visited{ 
+	background: transparent; 
+	color: #FFF; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #BBB; 
+	text-decoration: none;
+}
+
+.toplinks{
+	background: transparent;
+	color: #FFF;
+	margin: 3px 7px;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #FFF;
+	font-size: 10px;
+}
+
+.copyright{ 
+	background: transparent;
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+.print {
+	background: #FFF;
+}
+
+.print a:link,
+#print a:link {
+	color: #036;
+}
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+	background: #FFF;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+/* ----- New Styles - IPB 2.1 --------------------------------- */
+
+.popupmenu{
+	background: #666;
+	border: 1px solid #000;
+	text-align:left;
+	font-size:10px;
+	white-space:nowrap;
+}
+
+.popupmenu-item{
+	padding: 2px;
+	white-space: nowrap;
+	border-bottom: 1px solid #000;
+}
+
+.popupmenu-item-last{
+	padding: 2px;
+	white-space: nowrap;
+}
+
+.popmenubutton{
+	background: #565656;
+	/*width: 110px;*/
+	white-space: nowrap;
+	color: #EEE;
+	font-weight: bold;
+	float: right;
+	text-align: center;
+	margin: 0;
+	font-size: 10px;
+	padding: 2px 5px 3px 5px;
+}
+
+.popmenubutton a:link,
+.popmenubutton a:visited,
+.popupmenu-item a:link,
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link,
+.popupmenu-item-last a:visited{
+	color: #EEE;
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popupmenu-item a:hover,
+.popupmenu-item-last a:hover{
+	color: #CCC;
+	text-decoration: none;
+}
+
+.popupmenu-category{
+	background: transparent url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/tile_sub.gif);
+	color: #FFF;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 1px;
+}
+
+.input-warn,
+.input-green,
+input,
+textarea,
+select{
+	color: #FFF;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.input-warn,
+.input-warn-content{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+.input-text{
+	color: #900;
+}
+
+.tabon{
+	border:1px solid #999;
+	border-bottom: 0;
+	background-color:#565656;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff{
+	border: 1px solid #464646;
+	border-bottom: 0;
+	background-color: #363636;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link,
+.tabon a:visited,
+.tabon a:active{
+	text-decoration:none;
+	color: #CCC;
+}
+
+.taboff a:link,
+.taboff a:visited,
+.taboff a:active{
+	text-decoration:none;
+	color: #FFF;
+}
+
+.mya-back{
+	background: #161616;
+	margin:1px;
+}
+
+.mya-content{
+	background: #565656;
+	padding:8px;
+	margin:0px;
+	border: 1px solid #868686;
+}
+
+.rteimage {
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteImageRaised {
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteImageLowered {
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteimage:hover {
+	background: #EBEBEB;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+}
+
+.rteBack {
+	background: #D3D3D3;
+	border: 1px outset;
+	letter-spacing: 0;
+	padding: 2px;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombutton {
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background: #565656;
+	color: #FFF;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombuttonon {
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background: #767676;
+	color: #FFF;
+}
+
+.rtebuttonbar1 {
+	background: url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-bottom:0px;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+	color: #000;
+}
+
+.rtebuttonbar2 {
+	background: url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-top:1px solid gray;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+	color: #000;
+}
+
+.rtebuttonbar1 tbody tr td,
+.rtebuttonbar1 tr td,
+.rtebuttonbar2 tbody tr td,
+.rtebuttonbar2 tr td,
+.rteBack tbody tr td,
+.rteBack tr td
+{
+	padding: 0;
+}
+
+.rteDiv {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+
+.rteiframe
+{
+	border:1px solid #767676;
+	background: #565656;
+}
+
+.rteselectbox
+{
+	font-size:11px;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #565656;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #666;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #767676;
+	background: #464646;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #767676;
+	padding:4px;
+}
+
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #FFF;
+	font-size: 11px;
+	line-height: 120%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 3px */
+padding: 3px;
+}
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #565656;
+	color: #FFF;
+}
+
+.maintitle td {
+	font-weight: bold;
+}
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+#logographic{
+	background: transparent url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+</style> 
+ 
+</head> 
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20051224101428/http%3A//www.undeadlords.net/forums/index.php%3Fshowforum%3D4" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.undeadlords.net/forums/index.php?showforum=4","20051224101428",1996,"/_static/",["/_static/css/banner-styles.css?v=bsmaklHF","/_static/css/iconochive.css?v=qtvMKcIJ"]);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<table cellspacing="0" cellpadding="0" height="100%">
+<tbody><tr><td class="border" nowrap="nowrap"><!--nocontent--></td>
+<td id="ipbwrapper" valign="top">
+<!--ipb.javascript.start-->
+<script type="text/javascript">
+ //<![CDATA[
+ var ipb_var_st            = "0";
+ var ipb_lang_tpl_q1       = "Please enter a page number to jump to between 1 and";
+ var ipb_var_s             = "";
+ var ipb_var_phpext        = "php";
+ var ipb_var_base_url      = "https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?s=&";
+ var ipb_var_image_url     = "style_images/charcoal";
+ var ipb_input_f           = "4";
+ var ipb_input_t           = "";
+ var ipb_input_p           = "";
+ var ipb_var_cookieid      = "udl_owns";
+ var ipb_var_cookie_domain = "undeadlords.net";
+ var ipb_var_cookie_path   = "/";
+ var ipb_md5_check         = "880ea6a14ea49e853634fbdc5015a024";
+ var ipb_new_msgs          = 0;
+ var use_enhanced_js       = 0;
+ //]]>
+</script>
+<script type="text/javascript" src="/web/20051224101428js_/http://www.undeadlords.net/forums/jscripts/ipb_global.js"></script>
+<script type="text/javascript" src="/web/20051224101428js_/http://www.undeadlords.net/forums/jscripts/ips_menu.js"></script>
+<script type="text/javascript" src="/web/20051224101428js_/http://www.undeadlords.net/forums/style_images/charcoal/folder_js_skin/ips_menu_html.js"></script>
+<!--ipb.javascript.end-->
+	<table id="logostrip" cellpadding="0" height="100"><tbody><tr><td width="100%"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php"><!--ipb.logo.start--><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/udl_logo.jpg" alt="IPB" style="vertical-align:top" border="0"><!--ipb.logo.end--></a>
+<div id="logostrip2">
+<!--ipb.rightlinks.start-->
+<!---->
+	<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Help">Help</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Search&amp;f=4">Search</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Members">Members</a>&nbsp;·&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=calendar">Calendar</a>&nbsp;<!--IBF.CHATLINK--><!--IBF.TSLLINK-->
+		<!--ipb.rightlinks.end-->
+</div></td></tr></tbody></table> 
+<div id="userlinksguest">
+	<p class="pcen"><b>Welcome Guest</b> ( <a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=00">Log In</a> | <a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Reg&amp;CODE=00">Register</a> )	</p>
+</div>
+<div id="navstrip"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/nav.gif" border="0" alt=">">&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=idx">The Undead Lords</a>&nbsp;»&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showforum=17">Public Area</a>&nbsp;»&nbsp;<a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showforum=4">Story Board</a><font color="#000000" style="font-size: 0px;">&nbsp;&nbsp;·&nbsp;Skin created by No1 1000</font></div>
+<!--IBF.NEWPMBOX-->
+<script language="javascript" type="text/javascript">
+<!--
+var unselectedbutton  = "style_images/charcoal/topic_unselected.gif";
+var selectedbutton    = "style_images/charcoal/topic_selected.gif";
+var lang_gobutton     = "With Selected";
+var lang_suredelete   = "Are you sure you wish to delete these topics?";
+var lang_clickhold    = "Click and hold to edit title";
+var img_folder_closed = 'f_closed.gif';
+var img_folder_normal = 'f_norm_no.gif';
+var perm_can_edit     = ;
+var perm_can_open     = ;
+var perm_can_close    = ;
+var perm_max_length   = 150;
+//-->
+</script>
+<script type="text/javascript" src="/web/20051224101428js_/http://www.undeadlords.net/forums/jscripts/ipb_forum.js"></script>   
+<!--IBF.SUBFORUMS-->
+<table class="ipbtable" cellspacing="0">
+	<tbody><tr>
+		<td style="padding-left:0px" width="60%">&nbsp;</td>
+		<td class="nopad" style="padding:0px 0px 5px 0px" align="right" nowrap="nowrap"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=post&amp;do=new_post&amp;f=4"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/t_new.gif" border="0" alt="Start new topic"></a></td>
+	</tr>
+</tbody></table>
+<div class="borderwrap">
+	<div class="maintitle" style="padding:4px">
+	<!-- TABLE FIX FOR MOZILLA WRAPPING-->
+	<table width="100%" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+	 <td width="99%"><div><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/nav_m.gif" border="0" alt=">" width="8" height="8">&nbsp;Story Board</div></td>
+	 <td width="1%" nowrap="nowrap" align="right">
+	  <div class="popmenubutton" id="forummenu-options" style="cursor: pointer;"><a href="#forumoptions">Forum Options</a> <img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/menu_action_down.gif" alt="V" title="Open Menu" border="0"></div>
+	 </td>
+	</tr>
+	</tbody></table>
+   </div>
+   <div class="popupmenu" id="forummenu-options_menu" style="display: none; z-index: 100; position: absolute; left: 0px; top: 0px;">
+<div class="popupmenu-item">
+<img src="style_images/charcoal/menu_item.gif" border="0" alt="V" style="vertical-align:middle"> <a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=04&amp;f=4&amp;fromforum=4">Mark forum as read and return</a>
+</div>
+<div class="popupmenu-item">
+<img src="style_images/charcoal/menu_item.gif" border="0" alt="V" style="vertical-align:middle"> <a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=04&amp;f=4&amp;fromforum=0">Mark forum as read and return to board index</a>
+</div>
+<div class="popupmenu-item-last">
+<img src="style_images/charcoal/menu_item.gif" border="0" alt="V" style="vertical-align:middle"> <a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=4">Subscribe to this forum</a>
+</div>
+
+</div><table class="ipbtable" cellspacing="0">
+	<tbody><tr> 
+		<th align="center">&nbsp;</th>
+		<th align="center">&nbsp;</th>
+		<th width="50%" nowrap="nowrap">Topic Title</th>
+		<th width="7%" align="center" nowrap="nowrap">Replies</th>
+		<th width="14%" align="center" nowrap="nowrap">Topic Starter</th>
+		<th width="7%" align="center" nowrap="nowrap">Views</th>
+		<th width="22%" nowrap="nowrap">Last Action</th>	</tr>
+<script type="text/javascript">
+  menu_build_menu(
+  "forummenu-options",
+  new Array(  			 img_item + " <a href='https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=04&amp;f=4&amp;fromforum=4'>Mark forum as read and return</a>",
+  			 img_item + " <a href='https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=Login&amp;CODE=04&amp;f=4&amp;fromforum=0'>Mark forum as read and return to board index</a>",
+  			 img_item + " <a href='https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=4'>Subscribe to this forum</a>"
+		    ) );
+ </script>
+
+
+
+	<!-- Forum page unique top -->
+	<!--IBF.ANNOUNCEMENTS--><!--PINNED-->    <!-- END PINNED --><!-- Begin Topic Entry 409 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-409" onclick="return topic_toggle_folder(&quot;409&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_closed.gif" border="0" alt="Closed"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			Pinned:  <span id="tid-span-409"><a id="tid-link-409" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=409" title="This topic was started: Sep 8 2005, 02:14 PM">The First Steps into Strife</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;409&quot;);" id="tid-desc-409">UDL Loreplay in Shadowbane</span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(409);">0</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=3">zophar</a></td>
+	<td align="center" class="row2">142</td>
+	<td class="row2"><span class="lastaction">8th September 2005 - 02:14 PM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=409&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=3">zophar</a></b></span></td></tr>
+<!-- End Topic Entry 409 --><!-- END PINNED -->
+<tr>
+   <th class="rowborder" colspan="8"><b>Forum Topics</b></th>
+</tr><!-- Begin Topic Entry 1486 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1486" onclick="return topic_toggle_folder(&quot;1486&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1486"><a id="tid-link-1486" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1486" title="This topic was started: Dec 22 2005, 09:33 PM">Cliffjumping</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1486&quot;);" id="tid-desc-1486"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1486);">1</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=269">Ravel</a></td>
+	<td align="center" class="row2">19</td>
+	<td class="row2"><span class="lastaction">Yesterday, 07:19 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1486&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=16">Shadowkhan</a></b></span></td></tr>
+<!-- End Topic Entry 1486 --><!-- Begin Topic Entry 1474 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1474" onclick="return topic_toggle_folder(&quot;1474&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1474"><a id="tid-link-1474" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1474" title="This topic was started: Dec 21 2005, 03:33 PM">A taste of death unending</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1474&quot;);" id="tid-desc-1474"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1474);">0</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=204">Arkadis</a></td>
+	<td align="center" class="row2">18</td>
+	<td class="row2"><span class="lastaction">21st December 2005 - 03:33 PM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1474&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=204">Arkadis</a></b></span></td></tr>
+<!-- End Topic Entry 1474 --><!-- Begin Topic Entry 1413 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1413" onclick="return topic_toggle_folder(&quot;1413&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1413"><a id="tid-link-1413" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1413" title="This topic was started: Dec 10 2005, 01:12 AM">A Winters Festival</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1413&quot;);" id="tid-desc-1413">A progressive Holiday Tale</span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1413);">6</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=28">Sachant</a></td>
+	<td align="center" class="row2">165</td>
+	<td class="row2"><span class="lastaction">19th December 2005 - 08:32 PM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1413&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=254">Azrael/Raven</a></b></span></td></tr>
+<!-- End Topic Entry 1413 --><!-- Begin Topic Entry 1431 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1431" onclick="return topic_toggle_folder(&quot;1431&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1431"><a id="tid-link-1431" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1431" title="This topic was started: Dec 14 2005, 03:03 PM">The Rage within...</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1431&quot;);" id="tid-desc-1431"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1431);">1</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=344">Wulfen</a></td>
+	<td align="center" class="row2">54</td>
+	<td class="row2"><span class="lastaction">14th December 2005 - 06:03 PM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1431&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=61">Kanien</a></b></span></td></tr>
+<!-- End Topic Entry 1431 --><!-- Begin Topic Entry 1407 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1407" onclick="return topic_toggle_folder(&quot;1407&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1407"><a id="tid-link-1407" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1407" title="This topic was started: Dec 8 2005, 10:42 PM">Delight</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1407&quot;);" id="tid-desc-1407"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1407);">5</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=254">Azrael/Raven</a></td>
+	<td align="center" class="row2">90</td>
+	<td class="row2"><span class="lastaction">10th December 2005 - 01:02 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1407&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=254">Azrael/Raven</a></b></span></td></tr>
+<!-- End Topic Entry 1407 --><!-- Begin Topic Entry 1385 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1385" onclick="return topic_toggle_folder(&quot;1385&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1385"><a id="tid-link-1385" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1385" title="This topic was started: Dec 5 2005, 11:59 AM">Search for the truth.</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1385&quot;);" id="tid-desc-1385"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1385);">2</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=91">Dyvm Slorm</a></td>
+	<td align="center" class="row2">44</td>
+	<td class="row2"><span class="lastaction">7th December 2005 - 09:59 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1385&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=91">Dyvm Slorm</a></b></span></td></tr>
+<!-- End Topic Entry 1385 --><!-- Begin Topic Entry 1392 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1392" onclick="return topic_toggle_folder(&quot;1392&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1392"><a id="tid-link-1392" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1392" title="This topic was started: Dec 5 2005, 06:10 PM">RP Story for admittance</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1392&quot;);" id="tid-desc-1392"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1392);">0</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=331">Uithiule Scrawharrow</a></td>
+	<td align="center" class="row2">33</td>
+	<td class="row2"><span class="lastaction">5th December 2005 - 06:10 PM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1392&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=331">Uithiule Scrawharrow</a></b></span></td></tr>
+<!-- End Topic Entry 1392 --><!-- Begin Topic Entry 1365 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1365" onclick="return topic_toggle_folder(&quot;1365&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/folder_post_icons/icon13.gif" border="0" alt=""></td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1365"><a id="tid-link-1365" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1365" title="This topic was started: Dec 2 2005, 05:26 AM">Lord Jiras and the search for the Magic Pantaloons!</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1365&quot;);" id="tid-desc-1365">An epic battle for the power of the pants!!!</span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1365);">2</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=275">Naziar99</a></td>
+	<td align="center" class="row2">67</td>
+	<td class="row2"><span class="lastaction">3rd December 2005 - 02:57 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1365&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=275">Naziar99</a></b></span></td></tr>
+<!-- End Topic Entry 1365 --><!-- Begin Topic Entry 1368 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1368" onclick="return topic_toggle_folder(&quot;1368&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1368"><a id="tid-link-1368" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1368" title="This topic was started: Dec 2 2005, 10:41 AM">Life or Death</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1368&quot;);" id="tid-desc-1368"></span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1368);">0</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=91">Dyvm Slorm</a></td>
+	<td align="center" class="row2">23</td>
+	<td class="row2"><span class="lastaction">2nd December 2005 - 10:41 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1368&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=91">Dyvm Slorm</a></b></span></td></tr>
+<!-- End Topic Entry 1368 --><!-- Begin Topic Entry 1240 -->
+<tr> 
+	<td align="center" class="row1" id="tid-folder-1240" onclick="return topic_toggle_folder(&quot;1240&quot;);"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts"></td>
+	<td align="center" class="row1">&nbsp;</td>
+	<td class="row1" valign="middle">
+	    <div style="float:right"></div>
+		<div>
+			 <span id="tid-span-1240"><a id="tid-link-1240" href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1240" title="This topic was started: Nov 18 2005, 03:54 PM">Camp Fire Story</a></span> 
+			<div class="desc"><span onclick="return span_desc_to_input(&quot;1240&quot;);" id="tid-desc-1240">This is the compelation story by the slaves and squires.</span></div>
+		</div>
+	</td>
+	<td align="center" class="row2">
+     <a href="javascript:who_posted(1240);">10</a>    </td>
+	<td align="center" class="row2"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=275">Naziar99</a></td>
+	<td align="center" class="row2">223</td>
+	<td class="row2"><span class="lastaction">30th November 2005 - 07:13 AM<br><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showtopic=1240&amp;view=getlastpost">Last post by:</a> <b><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?showuser=16">Shadowkhan</a></b></span></td></tr>
+<!-- End Topic Entry 1240 --><tr>
+			<td colspan="8" class="darkrow1">
+				<table class="ipbtable" cellspacing="0">
+					<tbody><tr>
+						<td width="50%" class="nopad">
+							<form action="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php" method="post" name="search">
+								<input type="hidden" name="forums" value="4">
+								<input type="hidden" name="cat_forum" value="forum">
+								<input type="hidden" name="act" value="Search">
+								<input type="hidden" name="joinname" value="1">
+								<input type="hidden" name="CODE" value="01">
+								<input type="text" size="30" name="keywords" value="Enter Keywords" onfocus="this.value = '';"> <input type="submit" value="Search forum" class="button">
+							</form>
+						</td>					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr> 
+			<td class="catend" colspan="8"></td>
+		</tr>
+	</tbody></table>
+</div>
+<table class="ipbtable" cellspacing="0">
+	<tbody><tr>
+		<td style="padding-left:0px" width="50%" nowrap="nowrap">&nbsp;</td>
+		<td class="nopad" style="padding:5px 0px 5px 0px" align="right" width="50%"><a href="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=post&amp;do=new_post&amp;f=4"><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/t_new.gif" border="0" alt="Start new topic"></a></td>
+	</tr>
+</tbody></table>
+<div class="row1" style="padding: 0;">
+<div class="borderwrap">
+	<div class="formsubtitle" style="padding: 4px;">1 User(s) are browsing this forum (1 Guests and 0 Anonymous Users)</div>
+	<div class="userlist" style="padding: 4px;">0 Members: </div>
+</div>
+<br>
+	<table class="ipbtable" cellspacing="0">
+		<tbody><tr>
+			<td width="5%" nowrap="nowrap">
+				<img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm.gif" border="0" alt="New Posts">&nbsp;&nbsp;<span class="desc">New Replies</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_norm_no.gif" border="0" alt="No New Posts">&nbsp;&nbsp;<span class="desc">No New Replies</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_hot.gif" border="0" alt="Hot topic">&nbsp;&nbsp;<span class="desc">Hot Topic (New)</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_hot_no.gif" border="0" alt="No new">&nbsp;&nbsp;<span class="desc">Hot Topic (No New)</span>&nbsp;
+			</td>
+			<td width="5%" nowrap="nowrap">
+				<img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_poll.gif" border="0" alt="Poll">&nbsp;&nbsp;<span class="desc">Poll (New)</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_poll_no.gif" border="0" alt="No new votes">&nbsp;&nbsp;<span class="desc">Poll (No New)</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_closed.gif" border="0" alt="Closed">&nbsp;&nbsp;<span class="desc">Locked Topic</span>
+				<br><img src="/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/f_moved.gif" border="0" alt="Moved">&nbsp;&nbsp;<span class="desc">Moved Topic</span>
+			</td>
+			<td align="right" width="90%">
+				<form onsubmit="if(document.jumpmenu.f.value == -1){return false;}" action="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=SF" method="get" name="jumpmenu">
+			             <input type="hidden" name="act" value="SF">
+<input type="hidden" name="s" value="">
+			             <select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.jumpmenu.submit() }" class="dropdown">
+			             <optgroup label="Site Jump">
+			              <option value="sj_home">Forum Home</option>
+			              <option value="sj_search">Search</option>
+			              <option value="sj_help">Help</option>
+			             </optgroup>
+			             <optgroup label="Forum Jump"><option value="17">Public Area</option>
+<option value="2">&nbsp;&nbsp;|-- General Chat</option>
+<option value="3">&nbsp;&nbsp;|-- Flame Board</option>
+<option value="4" selected="selected">&nbsp;&nbsp;|-- Story Board</option>
+<option value="7">&nbsp;&nbsp;|-- Plead for Admittance</option>
+<option value="26">&nbsp;&nbsp;|---- Plead For Admittance - Shadowbane</option>
+<option value="27">&nbsp;&nbsp;|---- Plead For Admittance - World of Warcraft</option>
+</optgroup>
+</select>&nbsp;<input type="submit" value="Go" class="button"></form><br><br>
+				<form action="https://web.archive.org/web/20051224101428/http://www.undeadlords.net/forums/index.php?act=SF&amp;f=4&amp;st=0&amp;changefilters=1" method="post">
+					<select name="sort_key"><option value="last_post" selected="selected">Order: Last Post</option>
+<option value="last_poster_name">Order: Last Poster</option>
+<option value="title">Order: Topic Title</option>
+<option value="starter_name">Order: Topic Starter</option>
+<option value="start_date">Order: Topic Started</option>
+<option value="topic_hasattach">Order: Attachments</option>
+<option value="posts">Order: Replies</option>
+<option value="views">Order: Views</option>
+</select>
+					<select name="sort_by"><option value="Z-A" selected="selected">Z-A</option>
+<option value="A-Z">A-Z</option>
+</select>
+					<select name="prune_day"><option value="1">From: Today</option>
+<option value="5">From: 5 days</option>
+<option value="7">From: 7 days</option>
+<option value="10">From: 10 days</option>
+<option value="15">From: 15 days</option>
+<option value="20">From: 20 days</option>
+<option value="25">From: 25 days</option>
+<option value="30" selected="selected">From: 30 days</option>
+<option value="60">From: 60 days</option>
+<option value="90">From: 90 days</option>
+<option value="100">Show All</option>
+</select>
+					<select name="topicfilter"><option value="all" selected="selected">Topics: All</option>
+<option value="open">Topics: Open</option>
+<option value="hot">Topics: Hot</option>
+<option value="poll">Topics: Polls</option>
+<option value="locked">Topics: Locked</option>
+<option value="moved">Topics: Moved</option>
+</select>
+					<input type="submit" value="Go" class="button">
+				</form>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+<br clear="all"><script type="text/javascript">
+//<![CDATA[
+ // INIT links for editing
+ 
+ if ( use_enhanced_js && perm_can_edit )
+ {
+ 	forum_init_topic_links();
+ }
+//]]>
+</script><!--TASK--><img src="https://web.archive.org/web/20051224101428im_/http://www.undeadlords.net/forums/index.php?act=task" border="0" height="1" width="1" alt=""><!--ETASK-->
+<table cellspacing="0" id="gfooter">
+	<tbody><tr>
+		<td width="45%"> </td>
+		<td width="10%" align="center" nowrap="nowrap"><a href="lofiversion/index.php/f4.html"><b>Lo-Fi Version</b></a></td>
+		<td width="45%" align="right" nowrap="nowrap">Time is now: 24th December 2005 - 04:14 AM</td>
+	</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+menu_do_global_init();//]]>
+</script>
+ 
+<!-- Copyright Information -->
+        				  <div align="center" class="copyright">
+        				  	<a href="https://web.archive.org/web/20051224101428/http://www.invisionboard.com/" style="text-decoration:none" target="_blank">Invision Power Board</a>
+        				  	v2.1.1 © 2005 &nbsp;IPS, Inc.
+        				  </div>
+		<!-- / Copyright -->
+</td>
+<td class="border" nowrap="nowrap" style="background: url(/web/20051224101428im_/http://www.undeadlords.net/forums/style_images/charcoal/border.gif) repeat-y left;"><!--nocontent--></td></tr>
+</tbody></table>
+ 
+
+<!--
+playback timings (ms):
+  captures_list: 275.365
+  exclusion.robots: 0.208
+  exclusion.robots.policy: 0.2
+  RedisCDXSource: 4.167
+  esindex: 0.008
+  LoadShardBlock: 251.94 (3)
+  PetaboxLoader3.datanode: 147.905 (4)
+  CDXLines.iter: 16.582 (3)
+  load_resource: 128.949
+  PetaboxLoader3.resolve: 62.99
+--></body></html>

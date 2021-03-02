@@ -259,10 +259,9 @@ let list = [
 	"https://web.archive.org/web/20040301125239/http://www.undeadlords.net/forums/"
 ]
 
-for(let i = 0; i <= list.length; i++) {
-		console.log(i)
-		parseURL(list[i])
-		let date = Date.now();
-		let end = Date.now() + 15000 + (i * 111);
-		while(date < end) {date = Date.now()}
+for(let i = 1; i < list.length - 1; i++) {
+	setTimeout(() => {
+		console.log(`puppet #${i} starting`);
+		parseURL(list[i]);
+	}, 30000 * i);
 }
