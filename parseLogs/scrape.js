@@ -43,11 +43,11 @@ const parseURL = async (url) => {
 	let backupURL = `https://github.com/Undead-Lords/udl-wbm-forum-archive/blob/main/${backupSavePath.substr(3)}`
 	let logSavePath = fileExists(`../logs/${dateOfStamp.substr(0, 4)}/${dateOfStamp.substr(0, 7)}/${removeDashes(dateOfStamp)}.json`);
 
-	console.log(`opening connection`);
+	console.log(`opening connection...`);
 	const browser = await puppeteer.launch()
-	console.log(`puppet launched`);
+	console.log(`puppet launched.`);
 	const page = await browser.newPage()
-	console.log(`opened page`);
+	console.log(`opened page...`);
 	await page.setViewport({width: 1280, height: 800})
 	console.log(`navigating...`);
 	await page.goto(url)
@@ -77,6 +77,7 @@ const parseURL = async (url) => {
 	await fs.writeFileSync(logSavePath, json);
 	console.log(`json saved to		${logSavePath}`);
 
+	console.log(`closing connection...`);
 	await browser.close();
 	return json;
 };
@@ -125,6 +126,37 @@ const parseHTML = (html, date) => {
 		}
 	}
 
+	//TODO: 2001-09 and later user made a post
+	regexp = /face="Verdana">\w{3}-\d\d-\d\d\s\d\d:\d\d&nbsp;\w\w\s<br>by\s.{2,30}<\/font><\/td>/g;
+	if(pHtml.match(regexp) !== null) {
+		tempArr = [...pHtml.match(regexp)];
+		for(let i = 0; i < tempArr.length; i++) {
+			let tempDesc = tempArr[i].match(/by\s.{2,30}<\/font>/)
+			tempDesc = `${tempDesc[0].substr(3, tempDesc[0].length - 10)} made a forum post`;
+			let tempDate = tempArr[i].match(/\w{3}-\d\d-\d\d/);
+			tempDate = tempDate[0].split('-');
+			tempDate = `${valYear(tempDate[2])}-${valMonth(tempDate[0])}-${tempDate[1]}`;
+			jsonArr.push({"dateOfActivity": tempDate, "description": tempDesc})
+		}
+	}
+
+	//TODO: pre-2001-09
+	regexp = /face="Verdana">.{2,30}<\/font><\/td>\s*<td\salign="CENTER"\svalign="TOP"\snowrap=""><font\ssize="1"\scolor="#FFFFFF"\sface="Verdana">\w{3}-\d\d-\d\d\s\d\d:\d\d&nbsp;\w\w<\/font>/g;
+	if(pHtml.match(regexp) !== null) {
+		tempArr = [...pHtml.match(regexp)];
+		for(let i = 0; i < tempArr.length; i++) {
+			let tempDesc = tempArr[i].match(/">.{2,30}<\/font>/)
+			tempDesc = `${tempDesc[0].substr(2, tempDesc[0].length - 9)} made a forum post`;
+			let tempDate = tempArr[i].match(/\w{3}-\d\d-\d\d/);
+			tempDate = tempDate[0].split('-');
+			tempDate = `${valYear(tempDate[2])}-${valMonth(tempDate[0])}-${tempDate[1]}`;
+			if(!tempDesc.includes('Guest')) {
+				jsonArr.push({"dateOfActivity": tempDate, "description": tempDesc})
+			}
+		}
+	}
+
+
 	//2004 user made a post
 	regexp = /<span\sclass="gensmall">\w{3}\s\w{3}\s\d\d?,\s\d{4}\s\d\d?:\d\d\s\w\w<br><a\shref="\S{20,100}">.{2,20}<\/a>\s<a\shref="view/g;
 	if(pHtml.match(regexp) !== null) {
@@ -151,7 +183,7 @@ const parseHTML = (html, date) => {
 		}
 	}
 
-	//TODO: 2006 user made a post
+	//2006 user made a post
 	regexp = /alt="Last\sPost"><\/a>\s<span>(\w{3}\s\d\d?\s\d{4}|\w{2,6}day),\s\d\d:\d\d\s\w\w<br><b>In:<\/b>&nbsp;<a\shref=".{20,150}"\stitle="Go\sto\sthe\sfirst\sunread\spost:\s.{2,80}">.{2,80}<\/a><br><b>By:<\/b>\s<a\shref=".{20,100}">.{2,20}<\/a><\/span><\/td>/g;
 	if(pHtml.match(regexp) !== null) {
 		tempArr = [...pHtml.match(regexp)];
@@ -189,7 +221,7 @@ const parseHTML = (html, date) => {
 		}
 	}
 
-	//TODO: 2006 most active date
+	//2006 most active date
 	//<\/a><\/b><br>Most\susers\sever\sonline\swas\s<b>\d*<\/b>\son\s<b>\w{3}\s\d\d?\s\d{4}
 	regexp = /<\/a><\/b><br>Most\susers\sever\sonline\swas\s<b>\d*<\/b>\son\s<b>\w{3}\s\d\d?\s\d{4}/g;
 	if(pHtml.match(regexp) !== null) {
@@ -270,6 +302,18 @@ const valMonth = (month) => {
 	}
 }
 
+const valYear = (year) => {
+
+	if(year.toString().length === 2) {
+		if(Number(year) < 90) {
+			year = `20${year}`;
+		} else {
+			year = `19${year}`;
+		}
+	}
+	return year;
+}
+
 const valDay = (day) => {
 	day = day.split('');
 	day = day.map(x => {
@@ -287,12 +331,48 @@ const valDay = (day) => {
 
 
 let list = [
-	"https://web.archive.org/web/20061127213039/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20061117040221/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20061108163549/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20061026201254/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20060518091950/http://www.undeadlords.net:80/forums/",
-	"https://web.archive.org/web/20040301125239/http://www.undeadlords.net/forums/"
+	"https://web.archive.org/web/20030404153810/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20030213055257/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20021003115019/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20020606112557/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20011205201842/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20010617040835/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20010408011402/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID2&conf=DCConfID1",
+	"https://web.archive.org/web/20030213053617/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20021205092035/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20021003114410/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20020606113506/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20020413231801/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20011112224402/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20030123014605/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=2&archive=",
+	"https://web.archive.org/web/20030509085018/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=3&archive=",
+	"https://web.archive.org/web/20030123015758/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=4&archive=",
+	"https://web.archive.org/web/20030123015527/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=5&archive=",
+	"https://web.archive.org/web/20020606170024/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=5&archive=",
+	"https://web.archive.org/web/20020820164328/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=5&archive=",
+	"https://web.archive.org/web/20021019104640/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&mm=5&archive=",
+	"https://web.archive.org/web/20010619171731/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20010409041004/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID9&conf=DCConfID1",
+	"https://web.archive.org/web/20010408011223/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID19&conf=DCConfID1",
+	"https://web.archive.org/web/20010408174643/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&conf=DCConfID1",
+	"https://web.archive.org/web/20010818075242/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&conf=DCConfID1",
+	"https://web.archive.org/web/20010714185033/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&mm=30&archive=",
+	"https://web.archive.org/web/20010714185140/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&mm=60&archive=",
+	"https://web.archive.org/web/20010714185357/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&mm=90&archive=",
+	"https://web.archive.org/web/20010426194537/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID3&mm=30&archive=",
+	"https://web.archive.org/web/20010619170258/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&conf=DCConfID1",
+	"https://web.archive.org/web/20010727204152/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=120&archive=",
+	"https://web.archive.org/web/20010727205252/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=90&archive=",
+	"https://web.archive.org/web/20010727204737/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=60&archive=",
+	"https://web.archive.org/web/20010427202744/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=60&archive=",
+	"https://web.archive.org/web/20010727204838/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=30&archive=",
+	"https://web.archive.org/web/20010427202417/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&mm=30&archive=",
+	"https://web.archive.org/web/20010619170258/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&conf=DCConfID1",
+	"https://web.archive.org/web/20010408175251/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID5&conf=DCConfID1",
+	"https://web.archive.org/web/20010619171023/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID8&conf=DCConfID1",
+	"https://web.archive.org/web/20010408175254/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID8&conf=DCConfID1",
+	"https://web.archive.org/web/20010619171023/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID8&conf=DCConfID1",
+	"https://web.archive.org/web/20010707031526/http://www.undeadlords.net/cgi-bin/dcforum/dcboard.cgi?az=list&forum=DCForumID8&mm=60&archive="
 ]
 
 //for(let i = 1; i < list.length - 1; i++) {
@@ -306,14 +386,17 @@ let list = [
 
 const helper = async (arr) => {
 	return new Promise(async (resolve) => {
+		let i=1;
 		for(let item of arr) {
-			console.log(item);
+			console.log(`${i} of ${arr.length}`);
 			await parseURL(item);
 		}
 		resolve(true);
 	})
 }
+
 async function bronnIsFruity(arr) {
 	await helper(arr);
 }
+
 bronnIsFruity(list);

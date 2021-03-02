@@ -1,8 +1,32 @@
 
 
-let arr = JSON.parse(require("fs").readFileSync("../logs/2003/2003-06/20030608.json", { encoding: "utf-8", flag: 'r'}).trim()).records.concat(
-	JSON.parse(require("fs").readFileSync("../logs/2003/2003-11/20031104.json", { encoding: "utf-8", flag: 'r'}).trim()).records,
-	JSON.parse(require("fs").readFileSync("../logs/2003/2003-12/20031206.json", { encoding: "utf-8", flag: 'r'}).trim()).records
+let arr = JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010408-0.json", { encoding: "utf-8", flag: 'r'}).trim()).concat(
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010408-1.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010408-2.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010408-3.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010408-4.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010409-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010426-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010427-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-04/20010427-1.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010617-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010619-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010619-1.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010619-2.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010619-3.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-06/20010619-4.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010707-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010714-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010714-1.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010714-2.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010727-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010727-1.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010727-2.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-07/20010727-3.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-08/20010818-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-11/20011112-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+	JSON.parse(require("fs").readFileSync("../logs/2001/2001-12/20011205-0.json", { encoding: "utf-8", flag: 'r'}).trim()),
+
 	)
 //import json above
 
